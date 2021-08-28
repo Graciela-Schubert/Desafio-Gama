@@ -4,7 +4,7 @@ const Candidate = require('../models/Candidate');
 module.exports = {
     async register(req, res) {
 
-        const { nome, cpf, dataNascimento, endereco, celular, email, profissao, identidade, telefone1, telefone2, sexo, cargoPretendido, estadoCivil, contato, veiculo, habilitacao  } = req.body;
+        const { nome, cpf, dataNascimento, endereco, cep, bairro, cidade, estado, celular, email, profissao, identidade, telefone1, telefone2, sexo, cargoPretendido, estadoCivil, contato, veiculo, habilitacao  } = req.body;
 
         // regra do CPF unico
         if (CheckCPF(cpf))
@@ -15,11 +15,15 @@ module.exports = {
             newCandidate.cpf = cpf;
             newCandidate.dataNascimento = dataNascimento;
             newCandidate.endereco = endereco;
+            newCandidate.cep = cep;
+            newCandidate.bairro = bairro;
+            newCandidate.cidade = cidade;
+            newCandidate.estado = estado;
             newCandidate.celular = celular;
             newCandidate.email = email;
             newCandidate.profissao = profissao;
             newCandidate.identidade = identidade;
-            newCandidate.telefone1 = telefon1;
+            newCandidate.telefone1 = telefone1;
             newCandidate.telefone2 = telefone2;
             newCandidate.sexo = sexo;
             newCandidate.cargoPretendido = cargoPretendido;
