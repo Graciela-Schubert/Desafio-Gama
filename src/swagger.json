@@ -18,34 +18,59 @@
       "/register": {
         "post": {
           "summary": "Cadastro de candidato",
-          "description": "Rota de cadastro de usuário, recebe: nome, genêro, email e cep",
+          "description": "Rota de cadastro de candidato",
           "tags": ["candidato"],
           "requestBody": {
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "name": {
-                      "type": "string"
-                    },
-                    "gender": {
-                      "type": "string"
-                    },
-                    "cep": {
-                      "type": "string"
-                    },
-                    "email": {
-                      "type": "string"
-                    }
+                    "nome": { "type": "string" },
+                    "cpf": { "type": "string" },
+                    "dataNascimento": { "type": "string" },
+                    "endereco": { "type": "string" },
+                    "celular": { "type": "string" },
+                    "email": { "type": "string" },
+                    "profissao": { "type": "string" },
+                    "identidade": { "type": "string" },
+                    "telefone1": { "type": "string" },
+                    "telefone2": { "type": "string" },
+                    "sexo": { "type": "string" },
+                    "cargoPretendido": { "type": "string" },
+                    "estadoCivil": { "type": "string" },
+                    "contato": { "type": "string" },
+                    "veiculo": { "type": "string" },
+                    "habilitacao": { "type": "string" }
                   }
                 },
                 "examples": {
                   "candidato": {
                     "value": {
-                      "name": "Graciela",
-                      "gender": "Feminino",
-                      "cep": "00000-000",
-                      "email": "gracielaschubert86@gmail.com"
+                      "nome": "Graciela",
+                      "cpf": "123456789",
+                      "dataNascimento": "000000",
+                      "endereco": {
+                        "value":{
+                          "cep": "string",
+                          "logradouro": "string",
+                          "numero": "string",
+                          "bairro": "string",
+                          "cidade": "string",
+                          "estado": "string"
+                        }                        
+                      },
+                      "celular": "string",
+                      "email": "string",
+                      "profissao": "string",
+                      "identidade": "string",
+                      "telefone1": "string",
+                      "telefone2": "string",
+                      "sexo": "string",
+                      "cargoPretendido": "string",
+                      "estadoCivil": "string",
+                      "contato": "string",
+                      "veiculo": "string",
+                      "habilitacao": "string"
                     }
                   }
                 }

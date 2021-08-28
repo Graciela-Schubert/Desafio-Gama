@@ -4,6 +4,6 @@ const routes = new express.Router();
 
 routes.post('/register', CandidateController.register);
 routes.get('/', (req, res) => {
-    res.send('itimalia');
+    res.send('enviando...');
 });
 module.exports = routes;
