@@ -1,0 +1,58 @@
+{
+    "openapi": "3.0.0",
+  
+    "info": {
+      "title": "API do Desafio GAMA",
+      "description": "API banco de curriculo",
+      "version": "0.0.1"
+    },
+  
+    "servers": [
+      {
+        "url": "http://localhost:5000",
+        "description": "ambiente de desenvolvimento"
+      }
+    ],
+  
+    "paths": {
+      "/register": {
+        "post": {
+          "summary": "Cadastro de candidato",
+          "description": "Rota de cadastro de usuário, recebe: nome, genêro, email e cep",
+          "tags": ["candidato"],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "gender": {
+                      "type": "string"
+                    },
+                    "cep": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "candidato": {
+                    "value": {
+                      "name": "Graciela",
+                      "gender": "Feminino",
+                      "cep": "00000-000",
+                      "email": "gracielaschubert86@gmail.com"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
