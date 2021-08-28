@@ -63,9 +63,13 @@ const App = () => {
 
 
   return (
+    
     <div>
+      <div class="App-header">
+    DADOS PESSOAIS
+    </div>
       <div>
-        <label>Nome</label>
+        <label>Nome Completo</label>
         <FormInput onChange={(e) => {
           setForm({ ...form, nome: e.target.value });
         }} value={form.nome}></FormInput>
@@ -78,7 +82,7 @@ const App = () => {
         <ErrorSpan isError={cpfError}>CPF incorreto</ErrorSpan>
       </div>
       <div>
-        <label>Data de nascimento</label>
+        <label>Data de Nascimento</label>
         <FormInput onChange={(e) => {
           setForm({ ...form, dataNascimento: e.target.value });
         }} value={form.dataNascimento}></FormInput>
@@ -88,11 +92,11 @@ const App = () => {
         <FormInput onChange={(e) => {
           setForm({ ...form, celular: e.target.value });
         }} value={form.celular}></FormInput>
-        <label>Tel. 1</label>
+        <label>Telefone Fixo 1</label>
         <FormInput onChange={(e) => {
           setForm({ ...form, telefone1: e.target.value });
         }} value={form.telefone1}></FormInput>
-        <label>Tel. 2</label>
+        <label>Telefone Fixo 2</label>
         <FormInput onChange={(e) => {
           setForm({ ...form, telefone2: e.target.value });
         }} value={form.telefone2}></FormInput>
@@ -105,25 +109,25 @@ const App = () => {
           setForm({ ...form, cep: e.target.value });
         }} value={form.cep}></FormInput>
         
-        <label>Endereco: </label>
+        <label>Endereço: </label>
         <FormInput onBlur={() => {
         }} onChange={(e) => {
           setForm({ ...form, endereco: e.target.value });
         }} value={form.endereco}></FormInput>
 
-        <label>bairro</label>
+        <label>Bairro</label>
         <FormInput onBlur={() => {
         }} onChange={(e) => {
           setForm({ ...form, bairro: e.target.value });
         }} value={form.bairro}></FormInput>
 
-        <label>cidade</label>
+        <label>Cidade</label>
         <FormInput onBlur={() => {
         }} onChange={(e) => {
           setForm({ ...form, cidade: e.target.value });
         }} value={form.cidade}></FormInput>
 
-        <label>estado</label>
+        <label>Estado</label>
         <FormInput onBlur={() => {
         }} onChange={(e) => {
           setForm({ ...form, estado: e.target.value });
@@ -131,60 +135,60 @@ const App = () => {
       </div>
 
       <div>
-        <label>email</label>
+        <label>E-mail</label>
         <FormInput onChange={(e) => {
           setForm({ ...form, email: e.target.value });
         }} value={form.email}></FormInput>
       </div>
 
       <div>
-        <label>Genero</label>
+        <label>Gênero </label>
         <FormInput onChange={(e) => {
           setForm({ ...form, sexo: e.target.value });
         }} value={form.sexo}></FormInput>
       </div>
 
       <div>
-        <label>cargoPretendido</label>
+        <label>Cargo Pretendido</label>
         <FormInput onChange={(e) => {
           setForm({ ...form, cargoPretendido: e.target.value });
         }} value={form.cargoPretendido}></FormInput>
       </div>
 
       <div>
-        <label>estadoCivil</label>
+        <label>Estado Civil</label>
         <FormInput onChange={(e) => {
           setForm({ ...form, estadoCivil: e.target.value });
         }} value={form.estadoCivil}></FormInput>
       </div>
 
       <div>
-        <label>contato</label>
+        <label>Contato</label>
         <FormInput onChange={(e) => {
           setForm({ ...form, contato: e.target.value });
         }} value={form.contato}></FormInput>
       </div>
 
       <div>
-        <label>veiculo</label>
+        <label>Veículo</label>
         <FormInput onChange={(e) => {
           setForm({ ...form, veiculo: e.target.value });
         }} value={form.veiculo}></FormInput>
       </div>
       <div>
-        <label>profissao</label>
+        <label>Profissão</label>
         <FormInput onChange={(e) => {
           setForm({ ...form, profissao: e.target.value });
         }} value={form.profissao}></FormInput>
       </div>
       <div>
-        <label>habilitacao</label>
+        <label>Habilitação</label>
         <FormInput onChange={(e) => {
           setForm({ ...form, habilitacao: e.target.value });
         }} value={form.habilitacao}></FormInput>
       </div>
       <div>
-        <label>identidade</label>
+        <label>Identidade</label>
         <FormInput onChange={(e) => {
           setForm({ ...form, identidade: e.target.value });
         }} value={form.identidade}></FormInput>

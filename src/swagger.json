@@ -50,14 +50,12 @@
                       "cpf": "123456789",
                       "dataNascimento": "000000",
                       "endereco": {
-                        "value":{
                           "cep": "string",
                           "logradouro": "string",
                           "numero": "string",
                           "bairro": "string",
                           "cidade": "string",
-                          "estado": "string"
-                        }                        
+                          "estado": "string"              
                       },
                       "celular": "string",
                       "email": "string",
@@ -69,8 +67,8 @@
                       "cargoPretendido": "string",
                       "estadoCivil": "string",
                       "contato": "string",
-                      "veiculo": "string",
-                      "habilitacao": "string"
+                      "veiculo": "true",
+                      "habilitacao": "true"
                     }
                   }
                 }
