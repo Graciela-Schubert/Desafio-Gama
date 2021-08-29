@@ -6,10 +6,6 @@ import axios from 'axios';
 const FormInput = styled.input`
 border: 1px solid;
 `;
-const ErrorSpan = styled.span`
-  color: red;
-  display: ${(props) => props.isError ? 'block' : 'none'};
-`;
 
 
 const App = () => {
@@ -25,9 +21,15 @@ const App = () => {
 
   const createCandidate = async (candidate) => {
     try {
-      const user = await axios.post('http://localhost:5000/register', form);
+ 
+      const user =  axios.post('https://bancocurriculos.herokuapp.com/register', form);
+
       if (user.status === 200) {
         alert('Cadastrado com sucesso.');
+      }
+      else
+      {
+        alert('Nao foi possivel efetivar o cadastro.');
       }
 
     } catch (error) {
@@ -36,38 +38,34 @@ const App = () => {
   };
 
   const [form, setForm] = useState({
-    nome: 'Graci',
+    nome: '',
     cep: '',
     endereco: '',
     bairro: '',
     cidade: '',
     estado: '',
-    email: 'a@a.com',    
+    email: '',    
     cpf: '',
-    dataNascimento: '101010',
-    celular: '9999999',
-    profissao: 'Analista',
-    identidade: '123345',
-    telefone1: '33333333',
-    telefone2: '33344444',
-    sexo: 'Fem',
-    cargoPretendido: 'Analista S',
-    estadoCivil: 'Casada',
-    contato: 'Graci',
-    veiculo: 'true',
-    habilitacao: 'true'
+    dataNascimento: '',
+    celular: '',
+    profissao: '',
+    identidade: '',
+    telefone1: '',
+    telefone2: '',
+    sexo: '',
+    cargoPretendido: '',
+    estadoCivil: '',
+    contato: '',
+    veiculo: '',
+    habilitacao: ''
   });
 
   const [cpfError, setCpfError] = useState(false);
 
-
-
   return (
     <div class="limiter">
-		<div class="container-login100">
-		<div class="wrap-login100">
-    
-      <form>
+    <div class="container-login100">
+    <div class="wrap-login100">
     
         <div class="App-header">
         Banco de currículos - Cadastro pessoal
@@ -85,7 +83,7 @@ const App = () => {
           <FormInput onChange={(e) => {
             setForm({ ...form, cpf: e.target.value });
           }} value={form.cpf}></FormInput>
-          <ErrorSpan isError={cpfError}>CPF incorreto</ErrorSpan>
+          
         </div>
         <div class="wrap-input100 validate-input">
           <label>Data de Nascimento</label>
@@ -203,9 +201,6 @@ const App = () => {
         <div class="container-login100-form-btn">
           <button class="login100-form-btn" onClick={() => createCandidate()}>Cadastrar</button>
         </div>  
-
-      </form>
-
     </div>
     </div>
     </div>
