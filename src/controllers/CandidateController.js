@@ -50,6 +50,15 @@ module.exports = {
 };
 
 function CheckCPF(novoCpf) {
-    const newCandidate = new Candidate();
-    return newCandidate.Any(c => c.cpf == novoCpf);
+
+    Candidate.findOne({ cpf: novoCpf }, function (err, doc){     
+        
+        if (doc === null) {            
+            return false; 
+
+        } else {            
+            return true;  
+        }
+    });
+
 }
