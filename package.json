@@ -1,19 +1,19 @@
 {
   "name": "fullstack-challenge-api",
   "engines": {
-    "node": ">=14.17.4",
-    "npm": ">=6.14.14"
+    "node": ">= 6.9.4",
+    "npm": ">= 4.4.0"
   },
   "module": "comomnjs",
   "version": "1.0.0",
-  "description": "",
+  "description": "iniciandoyarn",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js"
   },
   "keywords": [],
-  "author": "Graciela Schubert",
+  "author": "Graciela",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
@@ -23,5 +23,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
-  }
+  },
+  "repository": "https://github.com/Graciela-Schubert/Desafio-Gama",
+  "private": false
 }
