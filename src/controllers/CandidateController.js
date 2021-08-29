@@ -51,14 +51,9 @@ module.exports = {
 
 function CheckCPF(novoCpf) {
 
-    Candidate.findOne({ cpf: novoCpf }, function (err, doc){     
-        
-        if (doc === null) {            
-            return false; 
-
-        } else {            
-            return true;  
-        }
+    var retorno = Candidate.findOne({ cpf: novoCpf }, function (err, doc){     
+        return (doc === null); 
     });
 
+    return retorno;
 }

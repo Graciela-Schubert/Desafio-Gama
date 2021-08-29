@@ -36,26 +36,26 @@ const App = () => {
   };
 
   const [form, setForm] = useState({
-    nome: '',
+    nome: 'Graci',
     cep: '',
     endereco: '',
     bairro: '',
     cidade: '',
     estado: '',
-    email: '',    
+    email: 'a@a.com',    
     cpf: '',
-    dataNascimento: '',
-    celular: '',
-    profissao: '',
-    identidade: '',
-    telefone1: '',
-    telefone2: '',
-    sexo: '',
-    cargoPretendido: '',
-    estadoCivil: '',
-    contato: '',
-    veiculo: '',
-    habilitacao: ''
+    dataNascimento: '101010',
+    celular: '9999999',
+    profissao: 'Analista',
+    identidade: '123345',
+    telefone1: '33333333',
+    telefone2: '33344444',
+    sexo: 'Fem',
+    cargoPretendido: 'Analista S',
+    estadoCivil: 'Casada',
+    contato: 'Graci',
+    veiculo: 'true',
+    habilitacao: 'true'
   });
 
   const [cpfError, setCpfError] = useState(false);
