@@ -35,7 +35,7 @@ module.exports = {
             newCandidate.save((err, savedCandidate) => {
                 if (err) {
                     console.log(err);
-                    return res.status(500).send('Erro interno do servidor, ao tentar salvar candidato! Verifique log de mensagens.');
+                    return res.status(500).send('Erro interno do servidor ao tentar salvar candidato! Verifique log de mensagens.');
                 }
 
                 return res.status(200).send(savedCandidate);
@@ -43,14 +43,22 @@ module.exports = {
         }
         else
         {
-            console.log('Cpf já cadastrado.');
-            return res.status(500).send('Cpf já cadastrado.');
+            console.log('CPF já cadastrado.');
+            return res.status(500).send('CPF já cadastrado.');
         }
     },
 };
 
-function CheckCPF(cpf, cadastrados) {
-    //cadastrados -> pegar lista do banco de dados!
-    //return (cpf.indexOf(cadastrados) <= 0);
-    return 1 == 1;
+function CheckCPF(novoCpf) {
+
+    Candidate.findOne({ cpf: novoCpf }, function (err, doc){     
+        
+        if (doc === null) {            
+            return false; 
+
+        } else {            
+            return true;  
+        }
+    });
+
 }

@@ -6,10 +6,11 @@ const routes = require('./routes');
 const app = express();
 const cors = require('cors');
 
-
-mongoose.connect('mongodb+srv://awsUser:YwrWqqecAY4vqMTQ@cluster0.k32ju.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+//mongodb+srv://awsUser:YwrWqqecAY4vqMTQ@cluster0.k32ju.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+mongoose.connect('mongodb+srv://graci:n0WWzL8cAtxWKBPd@cluster0.xrzze.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useUnifiedTopology: true
 });
 app.use(cors());
 app.use(express.json());
